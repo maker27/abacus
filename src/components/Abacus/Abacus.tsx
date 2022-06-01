@@ -1,38 +1,23 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import './Abacus.scss';
 import AbacusRow from './AbacusRow';
-import { BeadsRecords } from '../../types/abacus';
+import { AbacusRowRecords, BeadColor, SkinColor } from '../../types/abacus';
 
-const rows: { topBead: boolean; beads: BeadsRecords }[] = [
-    {
-        topBead: false,
-        beads: [3, 1]
-    },
-    {
-        topBead: true,
-        beads: [2, 2]
-    },
-    {
-        topBead: true,
-        beads: [0, 4]
-    },
-    {
-        topBead: false,
-        beads: [3, 1]
-    },
-    {
-        topBead: true,
-        beads: [0, 4]
-    }
-];
+interface AbacusProps {
+    skinColor: SkinColor;
+    beadColor: BeadColor;
+    rows: AbacusRowRecords;
+}
 
-const Abacus: React.FC = () => {
+const Abacus: React.FC<AbacusProps> = ({ skinColor, beadColor, rows }) => {
     return (
-        <div className="abacus">
+        <div className={clsx('abacus', `abacus_${skinColor}`)}>
             {rows.map((row, i) => (
                 <AbacusRow
                     key={i}
+                    beadColor={beadColor}
                     topBeadPosition={row.topBead ? 'top' : 'bottom'}
                     beads={row.beads}
                 />

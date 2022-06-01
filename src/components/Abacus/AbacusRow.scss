@@ -10,7 +10,7 @@
 .abacus__section {
     @extend %flex-column;
     justify-content: space-between;
-    border: 3px double gray;
+    border: 3px double;
     border-radius: 1rem;
 
     &_upper {
