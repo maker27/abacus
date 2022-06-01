@@ -1,0 +1,28 @@
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.abacus__row {
+    @extend %flex-column;
+}
+
+.abacus__section {
+    @extend %flex-column;
+    justify-content: space-between;
+    border: 3px double gray;
+    border-radius: 1rem;
+
+    &_upper {
+        flex: 0 0 66px;
+        margin-bottom: 1rem;
+    }
+
+    &_lower {
+        flex: 1 1 216px;
+    }
+}
+
+.abacus__beads-list {
+    @extend %flex-column;
+}
