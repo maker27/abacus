@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
-import './App.scss';
+import './sass/_global.scss';
 import AbacusContainer from './containers/AbacusContainer';
 import ControlPanelContainer from './containers/ControlPanelContainer';
 import { Context, defaultContextValue } from './context';

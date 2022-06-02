@@ -1,6 +1,8 @@
+@import "../../sass/_variables.scss";
+
 .bead {
-    width: 30px;
-    height: 30px;
+    width: $bead-width;
+    height: $bead-height;
     border: 1px solid black;
     border-radius: 50%;
 

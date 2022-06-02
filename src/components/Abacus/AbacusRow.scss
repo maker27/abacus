@@ -1,3 +1,5 @@
+@import "../../sass/_variables.scss";
+
 %flex-column {
     display: flex;
     flex-direction: column;
@@ -10,16 +12,16 @@
 .abacus__section {
     @extend %flex-column;
     justify-content: space-between;
-    border: 3px double;
+    border: $abacus-border-width double;
     border-radius: 1rem;
 
     &_upper {
-        flex: 0 0 66px;
+        flex: 0 0 $bead-height * 2 + $abacus-border-width * 2;
         margin-bottom: 1rem;
     }
 
     &_lower {
-        flex: 1 1 226px;
+        flex: 1 1 $bead-height * 7 + $abacus-border-width * 2 + 20px;
     }
 }
 
