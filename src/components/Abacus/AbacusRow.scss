@@ -7,21 +7,27 @@
 
 .abacus__row {
     @extend %flex-column;
+    width: 72px;
+    height: 416px;
+    background: none center/contain no-repeat;
 }
 
 .abacus__section {
     @extend %flex-column;
     justify-content: space-between;
+    align-items: center;
     border: $abacus-border-width double;
     border-radius: 1rem;
 
     &_upper {
         flex: 0 0 $bead-height * 2 + $abacus-border-width * 2;
-        margin-bottom: 1rem;
+        margin-top: 38px;
     }
 
     &_lower {
-        flex: 1 1 $bead-height * 7 + $abacus-border-width * 2 + 20px;
+        flex: 1 1 $bead-height * $max-beads-count + $abacus-border-width * 2 +
+            20px;
+        margin: 34px 0 48px;
     }
 }
 

@@ -1,12 +1,50 @@
 .abacus {
     display: flex;
-    column-gap: 1rem;
 
-    &_light .abacus__section {
-        border-color: #f5f5dc;
+    &:before,
+    &:after {
+        content: "";
+        width: 58px;
+        background: none center/contain no-repeat;
     }
 
-    &_dark .abacus__section {
-        border-color: #b8860b;
+    &_light {
+        &:before {
+            background-image: url(../../images/row-left-light.png);
+        }
+        &:after {
+            background-image: url(../../images/row-right-light.png);
+        }
+        .abacus__row {
+            background-image: url(../../images/row-light.png);
+        }
+        .abacus__section {
+            border-color: #f5f5dc;
+        }
+    }
+
+    &_dark {
+        &:before {
+            background-image: url(../../images/row-left-dark.png);
+        }
+        &:after {
+            background-image: url(../../images/row-right-dark.png);
+        }
+        .abacus__row {
+            background-image: url(../../images/row-dark.png);
+        }
+        .abacus__section {
+            border-color: #b8860b;
+        }
+    }
+
+    @media (max-width: 480px) {
+        transform: scale(0.9);
+    }
+    @media (max-width: 380px) {
+        transform: scale(0.8);
+    }
+    @media (max-width: 330px) {
+        transform: scale(0.7);
     }
 }

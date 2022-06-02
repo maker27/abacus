@@ -3,15 +3,14 @@
 .bead {
     width: $bead-width;
     height: $bead-height;
-    border: 1px solid black;
-    border-radius: 50%;
+    background: none center/contain no-repeat;
 
     &_blue {
-        background: blue;
+        background-image: url(../../images/bead-blue.png);
     }
 
     &_orange {
-        background: orange;
+        background-image: url(../../images/bead-yellow.png);
     }
 
     &_align-top {
@@ -19,5 +18,15 @@
     }
     &_align-bottom {
         margin-top: auto;
+    }
+
+    &__sectional {
+        margin-top: -10px;
+    }
+
+    @for $i from 1 through $max-beads-count {
+        &:nth-child(#{$max-beads-count - $i + 1}) {
+            z-index: $i;
+        }
     }
 }

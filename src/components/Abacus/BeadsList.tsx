@@ -19,7 +19,7 @@ const BeadsList: React.FC<BeadsListProps> = ({
     return (
         <div className={clsx('abacus__beads-list', className)}>
             {getNumberedArray(count).map(i => (
-                <Bead key={i} color={beadColor} />
+                <Bead key={i} color={beadColor} className="bead__sectional" />
             ))}
         </div>
     );
