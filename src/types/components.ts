@@ -4,8 +4,11 @@ export interface ClassNameProps {
     className?: string;
 }
 
-export interface ColorSelectOption<T = string> {
+export interface SelectOption<T = string> {
     value: T;
     label: string;
-    color: Color;
+}
+
+export interface ColorSelectOption<T = string> extends SelectOption<T> {
+    color?: Color;
 }

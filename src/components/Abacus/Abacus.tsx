@@ -3,12 +3,12 @@ import clsx from 'clsx';
 
 import './Abacus.scss';
 import AbacusRow from './AbacusRow';
-import { AbacusRowRecords, BeadColor, SkinColor } from '../../types/abacus';
+import { AbacusRowRecord, BeadColor, SkinColor } from '../../types/abacus';
 
 interface AbacusProps {
     skinColor: SkinColor;
     beadColor: BeadColor;
-    rows: AbacusRowRecords;
+    rows: AbacusRowRecord[];
 }
 
 const Abacus: React.FC<AbacusProps> = ({ skinColor, beadColor, rows }) => {

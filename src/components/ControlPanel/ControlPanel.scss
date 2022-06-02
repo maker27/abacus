@@ -1,7 +1,8 @@
 .control-panel {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    column-gap: 2rem;
+    gap: 2rem;
 
     &__item {
         display: flex;

@@ -6,4 +6,4 @@ export type TopBeadPosition = 'top' | 'bottom';
 
 export type BeadsRecords = [number, number];
 
-export type AbacusRowRecords = { topBead: boolean; beads: BeadsRecords }[];
+export type AbacusRowRecord = { topBead: boolean; beads: BeadsRecords };

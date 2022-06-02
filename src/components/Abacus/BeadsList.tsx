@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import Bead from './Bead';
 import { ClassNameProps } from '../../types/components';
 import { BeadColor } from '../../types/abacus';
+import { getNumberedArray } from '../../utils';
 
 interface BeadsListProps extends ClassNameProps {
     count: number;
@@ -17,11 +18,11 @@ const BeadsList: React.FC<BeadsListProps> = ({
 }) => {
     return (
         <div className={clsx('abacus__beads-list', className)}>
-            {[...Array(count)].map((_, i) => (
+            {getNumberedArray(count).map(i => (
                 <Bead key={i} color={beadColor} />
             ))}
         </div>
     );
 };
 
-export default BeadsList;
+export default React.memo(BeadsList);

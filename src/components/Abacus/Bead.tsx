@@ -13,4 +13,4 @@ const Bead: React.FC<BeadProps> = ({ className, color = 'blue' }) => {
     return <div className={clsx('bead', className, `bead_${color}`)}></div>;
 };
 
-export default Bead;
+export default React.memo(Bead);

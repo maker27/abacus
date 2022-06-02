@@ -35,4 +35,4 @@ const AbacusRow: React.FC<AbacusRowProps> = ({
     );
 };
 
-export default AbacusRow;
+export default React.memo(AbacusRow);
