@@ -1,19 +1,35 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 import ControlPanel from '../components/ControlPanel/ControlPanel';
-import { Context } from '../context';
+import {
+    AbacusSelector,
+    changeBeadColor,
+    changeBeadsCount,
+    changeRowsCount,
+    changeSkin
+} from '../store/abacusSlice';
+import { BeadColor, SkinColor } from '../types/abacus';
+import useDispatchedAction from '../hooks/useDispatchedAction';
 
 const ControlPanelContainer: React.FC = () => {
-    const {
-        skin,
-        beadColor,
-        rowsCount,
-        beadsCount,
-        changeSkin,
-        changeBeadColor,
-        changeRowsCount,
+    const { skin, beadColor, rowsCount, beadsCount } = useSelector(
+        AbacusSelector
+    );
+
+    const dispatchedChangeSkin = useDispatchedAction<SkinColor>(changeSkin);
+
+    const dispatchedChangeBeadColor = useDispatchedAction<BeadColor>(
+        changeBeadColor
+    );
+
+    const dispatchedChangeRowsCount = useDispatchedAction<number>(
+        changeRowsCount
+    );
+
+    const dispatchedChangeBeadsCount = useDispatchedAction<number>(
         changeBeadsCount
-    } = useContext(Context);
+    );
 
     return (
         <ControlPanel
@@ -21,10 +37,10 @@ const ControlPanelContainer: React.FC = () => {
             beadColor={beadColor}
             rowsCount={rowsCount}
             beadsCount={beadsCount}
-            changeSkin={changeSkin}
-            changeBeadColor={changeBeadColor}
-            changeRowsCount={changeRowsCount}
-            changeBeadsCount={changeBeadsCount}
+            changeSkin={dispatchedChangeSkin}
+            changeBeadColor={dispatchedChangeBeadColor}
+            changeRowsCount={dispatchedChangeRowsCount}
+            changeBeadsCount={dispatchedChangeBeadsCount}
         />
     );
 };

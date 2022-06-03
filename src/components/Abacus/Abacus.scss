@@ -38,13 +38,22 @@
         }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 700px) {
         transform: scale(0.9);
     }
-    @media (max-width: 380px) {
+    @media (max-width: 630px) {
         transform: scale(0.8);
     }
-    @media (max-width: 330px) {
+    @media (max-width: 560px) {
         transform: scale(0.7);
+    }
+    @media (max-width: 490px) {
+        transform: scale(0.6);
+    }
+    @media (max-width: 420px) {
+        transform: scale(0.5);
+    }
+    @media (max-width: 350px) {
+        transform: scale(0.4);
     }
 }

@@ -1,18 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 import Abacus from '../components/Abacus/Abacus';
-import { Context } from '../context';
-import { AbacusRowRecord } from '../types/abacus';
-import { TSetState } from '../types/components';
 import useAbacus from '../hooks/useAbacus';
+import { AbacusSelector } from '../store/abacusSlice';
 
-interface AbacusContainerProps {
-    setRows: TSetState<AbacusRowRecord[]>;
-}
+const AbacusContainer: React.FC = () => {
+    const { skin, beadColor, rows } = useSelector(AbacusSelector);
 
-const AbacusContainer: React.FC<AbacusContainerProps> = ({ setRows }) => {
-    const { skin, beadColor, rows } = useContext(Context);
-    const { onAbacusClick } = useAbacus(setRows);
+    const { onAbacusClick } = useAbacus();
 
     return (
         <Abacus
