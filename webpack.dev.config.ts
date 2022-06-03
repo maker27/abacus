@@ -18,7 +18,11 @@ const config: webpack.Configuration = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript']
+                        presets: [
+                            '@babel/preset-env',
+                            '@babel/preset-react',
+                            '@babel/preset-typescript'
+                        ]
                     }
                 }
             },
@@ -42,7 +46,7 @@ const config: webpack.Configuration = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'src/index.html',
-            favicon: 'src/images/favicon.png'
+            favicon: 'src/assets/images/favicon.png'
         }),
         new webpack.HotModuleReplacementPlugin(),
         new ForkTsCheckerWebpackPlugin({

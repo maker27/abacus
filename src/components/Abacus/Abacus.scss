@@ -10,13 +10,13 @@
 
     &_light {
         &:before {
-            background-image: url(../../images/row-left-light.png);
+            background-image: url(../../assets/images/row-left-light.png);
         }
         &:after {
-            background-image: url(../../images/row-right-light.png);
+            background-image: url(../../assets/images/row-right-light.png);
         }
         .abacus__row {
-            background-image: url(../../images/row-light.png);
+            background-image: url(../../assets/images/row-light.png);
         }
         .abacus__section {
             border-color: #f5f5dc;
@@ -25,13 +25,13 @@
 
     &_dark {
         &:before {
-            background-image: url(../../images/row-left-dark.png);
+            background-image: url(../../assets/images/row-left-dark.png);
         }
         &:after {
-            background-image: url(../../images/row-right-dark.png);
+            background-image: url(../../assets/images/row-right-dark.png);
         }
         .abacus__row {
-            background-image: url(../../images/row-dark.png);
+            background-image: url(../../assets/images/row-dark.png);
         }
         .abacus__section {
             border-color: #b8860b;
