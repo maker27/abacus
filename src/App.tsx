@@ -73,7 +73,7 @@ const App: React.FC = () => {
     return (
         <Context.Provider value={contextValue}>
             <ControlPanelContainer />
-            <AbacusContainer />
+            <AbacusContainer setRows={setRows} />
         </Context.Provider>
     );
 };

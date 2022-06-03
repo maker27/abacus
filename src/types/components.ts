@@ -1,4 +1,8 @@
+import { Dispatch, SetStateAction } from 'react';
+
 import { Color } from './colors';
+
+export type TSetState<T> = Dispatch<SetStateAction<T>>;
 
 export interface ClassNameProps {
     className?: string;

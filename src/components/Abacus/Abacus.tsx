@@ -9,11 +9,19 @@ interface AbacusProps {
     skinColor: SkinColor;
     beadColor: BeadColor;
     rows: AbacusRowRecord[];
+    onClick: React.MouseEventHandler<HTMLDivElement>;
 }
 
-const Abacus: React.FC<AbacusProps> = ({ skinColor, beadColor, rows }) => {
+const Abacus: React.FC<AbacusProps> = ({
+    skinColor,
+    beadColor,
+    rows,
+    onClick
+}) => {
     return (
-        <div className={clsx('abacus', `abacus_${skinColor}`)}>
+        <div
+            className={clsx('abacus', `abacus_${skinColor}`)}
+            onClick={onClick}>
             {rows.map((row, i) => (
                 <AbacusRow
                     key={i}

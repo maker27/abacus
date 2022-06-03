@@ -35,7 +35,7 @@ const config: webpack.Configuration = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpe?g|gif|webp|ico|svg)$/i,
+                test: /\.(png|jpe?g|gif|webp|ico|svg|mp3)$/i,
                 use: [
                     {
                         loader: 'file-loader'

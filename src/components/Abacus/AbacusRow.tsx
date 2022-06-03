@@ -28,8 +28,16 @@ const AbacusRow: React.FC<AbacusRowProps> = ({
                 />
             </div>
             <div className="abacus__section abacus__section_lower">
-                <BeadsList count={beads[0]} beadColor={beadColor} />
-                <BeadsList count={beads[1]} beadColor={beadColor} />
+                <BeadsList
+                    className="list_upper"
+                    count={beads[0]}
+                    beadColor={beadColor}
+                />
+                <BeadsList
+                    className="list_lower"
+                    count={beads[1]}
+                    beadColor={beadColor}
+                />
             </div>
         </div>
     );

@@ -9,3 +9,10 @@ export function padEndArray<T = unknown>(
 ): T[] {
     return Object.assign(Array(length).fill(value), array);
 }
+
+export function getOrderNumberFromList(
+    nodesList: HTMLCollection,
+    node: Element
+): number {
+    return Array.prototype.indexOf.call(nodesList, node) + 1;
+}

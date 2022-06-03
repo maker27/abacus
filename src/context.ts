@@ -1,10 +1,9 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 
 import { AbacusRowRecord, BeadColor, SkinColor } from './types/abacus';
 import { getNumberedArray } from './utils';
 import { defaultRowRecord } from './constants';
-
-type TSetState<T> = Dispatch<SetStateAction<T>>;
+import { TSetState } from './types/components';
 
 interface ContextValueProps {
     skin: SkinColor;
